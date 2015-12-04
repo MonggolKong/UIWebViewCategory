@@ -14,8 +14,7 @@
 		C60545DE1C0D4DD700448D0D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C60545DD1C0D4DD700448D0D /* Images.xcassets */; };
 		C60545E11C0D4DD700448D0D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C60545DF1C0D4DD700448D0D /* LaunchScreen.xib */; };
 		C60545ED1C0D4DD700448D0D /* DataKongTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C60545EC1C0D4DD700448D0D /* DataKongTests.m */; };
-		C6D703CC1C10393D00B13ABE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D703CB1C10393D00B13ABE /* WebKit.framework */; };
-		C6E29DC61C10303F0025F6FE /* Vg_WebViewJavaScript.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E29DC51C10303F0025F6FE /* Vg_WebViewJavaScript.m */; };
+		C6E9970A1C116CE4008D9545 /* UIWebView+UIWebView_JavaScript.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E997091C116CE4008D9545 /* UIWebView+UIWebView_JavaScript.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +41,8 @@
 		C60545E61C0D4DD700448D0D /* WebViewAndJavaScript.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebViewAndJavaScript.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60545EB1C0D4DD700448D0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C60545EC1C0D4DD700448D0D /* DataKongTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataKongTests.m; sourceTree = "<group>"; };
-		C6D703CB1C10393D00B13ABE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		C6E29DC41C10303F0025F6FE /* Vg_WebViewJavaScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vg_WebViewJavaScript.h; path = ../Vg_WebViewJavaScript.h; sourceTree = "<group>"; };
-		C6E29DC51C10303F0025F6FE /* Vg_WebViewJavaScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Vg_WebViewJavaScript.m; path = ../Vg_WebViewJavaScript.m; sourceTree = "<group>"; };
+		C6E997081C116CE4008D9545 /* UIWebView+UIWebView_JavaScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIWebView+UIWebView_JavaScript.h"; path = "../UIWebView+UIWebView_JavaScript.h"; sourceTree = "<group>"; };
+		C6E997091C116CE4008D9545 /* UIWebView+UIWebView_JavaScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+UIWebView_JavaScript.m"; path = "../UIWebView+UIWebView_JavaScript.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +50,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6D703CC1C10393D00B13ABE /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +66,6 @@
 		C60545C41C0D4DD600448D0D = {
 			isa = PBXGroup;
 			children = (
-				C6D703CB1C10393D00B13ABE /* WebKit.framework */,
 				C60545CF1C0D4DD700448D0D /* DataKong */,
 				C60545E91C0D4DD700448D0D /* DataKongTests */,
 				C60545CE1C0D4DD700448D0D /* Products */,
@@ -88,8 +84,8 @@
 		C60545CF1C0D4DD700448D0D /* DataKong */ = {
 			isa = PBXGroup;
 			children = (
-				C6E29DC41C10303F0025F6FE /* Vg_WebViewJavaScript.h */,
-				C6E29DC51C10303F0025F6FE /* Vg_WebViewJavaScript.m */,
+				C6E997081C116CE4008D9545 /* UIWebView+UIWebView_JavaScript.h */,
+				C6E997091C116CE4008D9545 /* UIWebView+UIWebView_JavaScript.m */,
 				C60545D41C0D4DD700448D0D /* AppDelegate.h */,
 				C60545D51C0D4DD700448D0D /* AppDelegate.m */,
 				C60545D71C0D4DD700448D0D /* ViewController.h */,
@@ -230,7 +226,7 @@
 			files = (
 				C60545D91C0D4DD700448D0D /* ViewController.m in Sources */,
 				C60545D61C0D4DD700448D0D /* AppDelegate.m in Sources */,
-				C6E29DC61C10303F0025F6FE /* Vg_WebViewJavaScript.m in Sources */,
+				C6E9970A1C116CE4008D9545 /* UIWebView+UIWebView_JavaScript.m in Sources */,
 				C60545D31C0D4DD700448D0D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

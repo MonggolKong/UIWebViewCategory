@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 #import "UIView+Frame.h"
-#import "Vg_WebViewJavaScript.h"
+#import "UIWebView+UIWebView_JavaScript.h"
+
 @interface ViewController ()<UIWebViewDelegate>
 @property (nonatomic, retain) UIWebView *webView;
 @end
@@ -17,24 +18,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
-    NSURL *url = [NSURL URLWithString:@"http://m.ydt.com/login/register.html"];
+    NSURL *url = [NSURL URLWithString:@"http://115.28.81.87/jushihui/wap/mall/index.html"];
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:url];
+    self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 100)];
     [self.webView loadRequest:urlRequest];
     self.webView.delegate = self;
-    [self.view addSubview:self.webView];
 }
 
 #pragma mark - UIWebViewDelegate
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
     NSLog(@"web 开始加载");
-
 }
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+    [webView deleteNodeByElementClass:@"pa left0 top10 bradius5"];
+    [Vg_WebViewJavaScript deleteNodeByElementClass:webView elementClass:@"mui-bar mui-bar-nav"];//通过 class 名字删除 JS中的消息
+    [self.view addSubview:self.webView];
     NSLog(@"web 完成加载");
-    NSLog(@"web View Title is %@",[Vg_WebViewJavaScript getTitleFromWebView:webView]);
 }
 
 - (void)didReceiveMemoryWarning {
